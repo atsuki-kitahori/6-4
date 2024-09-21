@@ -49,6 +49,7 @@ if (empty($name) || empty($email) || empty($phone_number)) {
 <body>
     <?php if ($success): ?>
         <h1>予約完了^^</h1>
+        <p><a href="reservations.php">予約一覧を表示</a></p>
     <?php else: ?>
         <h1>エラーが発生しました</h1>
         <p>申し訳ありませんが、予約の処理中にエラーが発生しました。もう一度お試しください。</p>
