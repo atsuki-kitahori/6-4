@@ -4,30 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>予約フォーム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <form action="complete.php" method="post">
-      <div>
-        <label for="name">予約者名:</label>
-        <input type="text" id="name" name="name" placeholder="予約者名" />
-      </div>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+      <h1 class="text-2xl font-bold mb-4">予約フォーム</h1>
+      <form action="complete.php" method="post">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2"
+            >予約者名</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="予約者名"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Email"
+          />
+        </div>
 
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Email" />
-      </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700 text-sm font-bold mb-2"
+            >電話番号</label
+          >
+          <input
+            type="tel"
+            id="phone_number"
+            name="phone_number"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="電話番号"
+          />
+        </div>
 
-      <div>
-        <label for="phone">電話番号:</label>
-        <input
-          type="tel"
-          id="phone_number"
-          name="phone_number"
-          placeholder="電話番号"
-        />
-      </div>
-
-      <button type="submit">予約する</button>
-    </form>
+        <button
+          type="submit"
+          class="w-full bg-indigo-500 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
+        >
+          送信
+        </button>
+      </form>
+    </div>
   </body>
 </html>
